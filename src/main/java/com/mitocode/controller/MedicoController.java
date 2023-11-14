@@ -35,6 +35,8 @@ public class MedicoController {
 	private IMedicoService service;
 
 	@GetMapping
+	// @PreAuthorize("@AuthServiceImpl.tieneAcceso('listar')")
+	// @PreAuthorize("hasAuthority('ADMIN')") 1a Forma, la mas simple de autorizar usuario-rol
 	public ResponseEntity<List<Medico>> listar() throws Exception {
 		List<Medico> lista = service.listar();
 		return new ResponseEntity<List<Medico>>(lista, HttpStatus.OK);

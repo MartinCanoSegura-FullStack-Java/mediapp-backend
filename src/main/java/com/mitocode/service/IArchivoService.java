@@ -6,4 +6,8 @@ public interface IArchivoService {
 
 	int guardar(Archivo archivo);
 	byte[] leerArchivo(Integer idArchivo);
+
+	// String store(MultipartFile file);
+	// Resource loadResource(String filename);
+	// void init();
 }

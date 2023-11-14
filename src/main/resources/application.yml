@@ -1,0 +1,18 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.mail.yahoo.com #smtp.yahoo.com.mx
+    username: chilinssky@yahoo.com.mx
+    password: dtrtooclzpgwsirq #Contraseña generada desde yahoo #Mecano007 #C@sm660617U77
+    port: 587
+    properties:
+      mail:
+        ssl:
+          enable: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    protocol: smtp
+    test-connection: false
