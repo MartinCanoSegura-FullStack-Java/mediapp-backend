@@ -6,7 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class MediappBackendApplication  extends SpringBootServletInitializer {
+public class MediappBackendApplication extends SpringBootServletInitializer {
+// public class MediappBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MediappBackendApplication.class, args);

@@ -62,7 +62,8 @@ public class LoginController {
 			mail.setSubject("RESTABLECER CONTRASEÑA  MEDIAPP");
 			
 			Map<String, Object> model = new HashMap<>();
-			String url = "http://localhost:4200/recuperar/" + token.getToken();
+			String url = "http://192.168.100.10:8080/madiapp-frontend/#/recuperar/" + token.getToken();
+			// String url = "http://localhost:4200/recuperar/" + token.getToken();
 			model.put("user", token.getUser().getUsername());
 			model.put("resetUrl", url);
 			mail.setModel(model);					
@@ -76,8 +77,6 @@ public class LoginController {
 	
 	@GetMapping(value = "/restablecer/verificar/{token}")
 	public ResponseEntity<Integer> verificarToken(@PathVariable("token") String token) {
-		System.out.println("******************************************* TOKEN: " + token);
-
 		int rpta = 0;
 		try {
 			if (token != null && !token.isEmpty()) {
